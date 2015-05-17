@@ -1,0 +1,30 @@
+{
+  "name": "monochro.me",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://github.com/rodrigo-barraza/monochro.me",
+  "authors": [
+    "Rodrigo Barraza <rodrigo@monochro.me>"
+  ],
+  "description": "Personal Site",
+  "main": "client/",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "monochrome"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "Polymer": "Polymer/polymer#",
+    "core-elements": "Polymer/core-elements#",
+    "paper-elements": "Polymer/paper-elements#",
+    "angular": "*"
+  }
+}
