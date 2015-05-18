@@ -1,0 +1,11 @@
+extends ../_template.jade
+block vars
+	- var page_title = ''
+	- var page_description = ''
+	- var page_keywords = ''
+block head
+	h1 {{item.title}}
+block main
+	div(ng-repeat="item in list_photography")
+		img(src={{}})
+

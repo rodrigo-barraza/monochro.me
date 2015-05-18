@@ -18,6 +18,7 @@ public_path = '/public'
 view_path = '/view'
 view_model_path = '/view-model'
 style_path = '/style'
+component_path = '/component'
 
 all_jade_files = '/**/*.jade'
 all_coffee_files = '/**/*.coffee'
@@ -43,6 +44,18 @@ gulp.task 'render_style', ->
         .pipe concat('./global.styl')
         .pipe stylus()
         .pipe minify_css({keepBreaks:true})
+        .pipe gulp.dest render_out
+        gutil.log ''
+        gutil.log 'from :', gutil.colors.yellow.bgBlack render_in
+        gutil.log 'to : ', gutil.colors.yellow.bgBlack render_out
+        gutil.log ''
+
+# RENDER COMPONENTS
+gulp.task 'render_components' , ->
+    render_in = current_dir + client_path + component_path + all_jade_files
+    render_out = current_dir + public_path + component_path
+    gulp.src render_in
+        .pipe jade(pretty: true)
         .pipe gulp.dest render_out
         gutil.log ''
         gutil.log 'from :', gutil.colors.yellow.bgBlack render_in
