@@ -4,8 +4,8 @@ block vars
 	- var page_description = ''
 	- var page_keywords = ''
 block head
-	h1 {{item.title}}
+	h1 {{list.photography.walks.title}}
 block main
-	div(ng-repeat="item in list_photography")
-		img(src={{}})
+	div(ng-repeat="item in list.photography.walks.content")
+		div(ng-style="{background-image: url({{item.content}})}")
 

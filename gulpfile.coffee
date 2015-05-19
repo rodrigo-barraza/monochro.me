@@ -13,7 +13,7 @@ gutil       = require 'gulp-util'
 # Paths
 current_dir = '.'
 client_path = '/client'
-public_path = '/public'
+app_path = '/app'
 
 view_path = '/view'
 view_model_path = '/view-model'
@@ -27,7 +27,7 @@ all_stylus_files = '/**/*.styl'
 # RENDER VIEW
 gulp.task 'render_view' , ->
     render_in = current_dir + client_path + view_path + all_jade_files
-    render_out = current_dir + public_path + view_path
+    render_out = current_dir + app_path + view_path
     gulp.src render_in
         .pipe jade(pretty: true)
         .pipe gulp.dest render_out
@@ -39,7 +39,7 @@ gulp.task 'render_view' , ->
 # RENDER STYLE
 gulp.task 'render_style', ->
     render_in = current_dir + client_path + style_path + all_stylus_files
-    render_out = current_dir + public_path + style_path
+    render_out = current_dir + app_path + style_path
     gulp.src render_in
         .pipe concat('./global.styl')
         .pipe stylus()
@@ -53,7 +53,7 @@ gulp.task 'render_style', ->
 # RENDER COMPONENTS
 gulp.task 'render_components' , ->
     render_in = current_dir + client_path + component_path + all_jade_files
-    render_out = current_dir + public_path + component_path
+    render_out = current_dir + app_path + component_path
     gulp.src render_in
         .pipe jade(pretty: true)
         .pipe gulp.dest render_out
