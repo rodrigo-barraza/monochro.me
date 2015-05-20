@@ -23,8 +23,9 @@
   ],
   "dependencies": {
     "Polymer": "Polymer/polymer#",
-    "core-elements": "Polymer/core-elements#",
+    "core-elements": "Polymer/core-elements#0.5",
     "paper-elements": "Polymer/paper-elements#",
-    "angular": "*"
+    "angular": "*",
+    "polymer": "Polymer/polymer#0.9.0"
   }
 }
