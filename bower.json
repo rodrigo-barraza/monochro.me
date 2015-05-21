@@ -22,10 +22,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "Polymer": "Polymer/polymer#",
-    "core-elements": "Polymer/core-elements#0.5",
-    "paper-elements": "Polymer/paper-elements#",
-    "angular": "*",
-    "polymer": "Polymer/polymer#0.9.0"
+    "angular": ">0.0",
+    "polymer": ">0.0"
   }
 }
