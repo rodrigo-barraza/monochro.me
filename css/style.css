@@ -1,4 +1,9 @@
 html,
 body {
-  background: #1b1b1b;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
