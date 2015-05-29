@@ -1,7 +1,7 @@
 Polymer
   is: 'component-header'
   ready: ->
-    @header_list = [
+    @items = [
       {
       	name : 'works'
       	url: '/#gallery'

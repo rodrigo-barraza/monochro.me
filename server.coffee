@@ -1,9 +1,9 @@
-express 	= require 'express'
-path 		= require 'path'
-assert 		= require 'assert'
-stylus		= require 'stylus'
+express   = require 'express'
+path    = require 'path'
+assert    = require 'assert'
+stylus    = require 'stylus'
 
-app 		= express()
+app     = express()
 
 compile = (str, path) ->
   stylus(str).set('filename', path)
@@ -12,10 +12,10 @@ compile = (str, path) ->
 app.set 'views', (path.join(__dirname + '/view'))
 app.set 'view engine', 'jade'
 app.use stylus.middleware
-	src: __dirname + '/'
-	dest: __dirname + '/'
-	force: true
-	compile: compile
+  src: __dirname + '/'
+  dest: __dirname + '/'
+  force: true
+  compile: compile
 
 app.use '/public', express.static(path.join(__dirname + '/public'))
 
@@ -26,20 +26,26 @@ app.use '/css', express.static(path.join(__dirname + '/css'))
 
 
 app.get '/', (req, res) ->
-	res.render 'index'
+  res.render 'index'
 
 app.get '/component/component-header', (req, res) ->
-	res.render '../component/component-header/index.jade'
+  res.render '../component/component-header/index.jade'
+
+app.get '/component/component-gallery', (req, res) ->
+  res.render '../component/component-gallery/index.jade'
+
+app.get '/component/component-navigation', (req, res) ->
+  res.render '../component/component-navigation/index.jade'
 
 app.get '/who', (req, res) ->
-	res.render 'who'
+  res.render 'who'
 
 app.get '/contact', (req, res) ->
-	res.render 'contact'
+  res.render 'contact'
 
 
 
 server = app.listen 10, ->
-	host = server.address().address
-	port = server.address().port
-	console.log 'Listening http://%s:%s', host, port
+  host = server.address().address
+  port = server.address().port
+  console.log 'Listening http://%s:%s', host, port

@@ -1,5 +1,5 @@
 dom-module(id="component-header")
   template
     a.logo
-    template(is="dom-repeat" items="{{header_list}}")
+    template(is="dom-repeat" items="{{items}}")
       a(href="{{item.url}}") {{item.name}}

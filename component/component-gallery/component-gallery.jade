@@ -1,2 +1,4 @@
-div(ng-repeat="item in list.photography")
-	h1 {{item.title}}
+dom-module(id="component-gallery")
+  template
+    template(is="dom-repeat" items="{{items}}")
+      p {{item.title}}

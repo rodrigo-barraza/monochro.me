@@ -27,8 +27,6 @@ all_stylus_files = '/**/*.styl'
 
 # RENDER COMPONENTS
 gulp.task 'render_components' , ->
-    render_in   = current_dir + component_path + '/component-header/index.jade'
-    render_out = current_dir  + component_path + '/component-header'
     YOUR_LOCALS = {}
     watch current_dir + component_path + all_jade_files , ->
         gulp.src render_in
@@ -38,11 +36,6 @@ gulp.task 'render_components' , ->
                 jade: jade_real
                 locals: YOUR_LOCALS
             )
-            .pipe gulp.dest render_out
-            gutil.log ''
-            gutil.log 'from :', gutil.colors.yellow.bgBlack render_in
-            gutil.log 'to : ', gutil.colors.yellow.bgBlack render_out
-            gutil.log ''
 
 gulp.task 'watch', ->
   gulp.watch [ current_dir + component_path + all_jade_files ], [ 'render_components' ]
