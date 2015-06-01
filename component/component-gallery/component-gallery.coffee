@@ -3,78 +3,81 @@ Polymer
   ready: ->
     @items = [
       {
-        title: "walks"
+        name: "walks"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
+        path: "walks"
       }
       {
-        title: "dreamwork"
+        name: "dreamwork"
         description: "Dreamwork; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
+        path: "dreamwork"
       }
       {
       rip_apart : 
-        title: "rip apart"
+        name: "rip apart"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
+        path: "rip-apart"
       }
       {
-        title: "spotless"
+        name: "spotless"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       { 
-        title: "the aura of home"
+        name: "the aura of home"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "urban places"
+        name: "urban places"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "light"
+        name: "light"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "person"
+        name: "person"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "imaginary objects"
+        name: "imaginary objects"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "faces"
+        name: "faces"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "imaginary landscapes"
+        name: "imaginary landscapes"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "hallow"
+        name: "hallow"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "plantae"
+        name: "plantae"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "tv date"
+        name: "tv date"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }
       {
-        title: "ink"
+        name: "ink"
         description: "Hallow; images regarding the intangibility of memories, emotions, dreams and previous events in life. Memory alters, emotions change, places shift, and locations are never the same."
         content:[]
       }

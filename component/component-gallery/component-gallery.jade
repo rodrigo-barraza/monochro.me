@@ -1,4 +1,6 @@
 dom-module(id="component-gallery")
   template
     template(is="dom-repeat" items="{{items}}")
-      p {{item.title}}
+      a(href="{{item.path}}")
+      	img(src="{{item.image}}" alt="{{item.description}}")
+        span {{item.name}}

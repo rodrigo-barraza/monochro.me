@@ -28,6 +28,10 @@ app.use '/css', express.static(path.join(__dirname + '/css'))
 app.get '/', (req, res) ->
   res.render 'index'
 
+
+app.get '/component/component-app', (req, res) ->
+  res.render '../component/component-app/index.jade'
+
 app.get '/component/component-header', (req, res) ->
   res.render '../component/component-header/index.jade'
 
