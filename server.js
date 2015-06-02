@@ -16,24 +16,31 @@
     return stylus(str).set('filename', path);
   };
 
-  app.set('views', path.join(__dirname + '/client/view'));
+  app.set('views', path.join(__dirname + '/view'));
 
   app.set('view engine', 'jade');
 
   app.use(stylus.middleware({
-    src: path.join(__dirname + '/client/style'),
-    dest: path.join(__dirname + '/public'),
+    src: __dirname + '/',
+    dest: __dirname + '/',
+    force: true,
     compile: compile
   }));
 
   app.use('/public', express["static"](path.join(__dirname + '/public')));
 
-  app.use('/component', express["static"](path.join(__dirname + '/client/component')));
+  app.use('/component', express["static"](path.join(__dirname + '/component')));
 
-  app.use('/style', express["static"](path.join(__dirname + '/client/style')));
+  app.use('/bower_components', express["static"](path.join(__dirname + '/bower_components')));
+
+  app.use('/css', express["static"](path.join(__dirname + '/css')));
 
   app.get('/', function(req, res) {
     return res.render('index');
+  });
+
+  app.get('/component/component-header', function(req, res) {
+    return res.render('../component/component-header/index.jade');
   });
 
   app.get('/who', function(req, res) {
