@@ -28,18 +28,8 @@ app.use '/css', express.static(path.join(__dirname + '/css'))
 app.get '/', (req, res) ->
   res.render 'index'
 
-
-app.get '/component/component-app', (req, res) ->
-  res.render '../component/component-app/index.jade'
-
-app.get '/component/component-header', (req, res) ->
-  res.render '../component/component-header/index.jade'
-
-app.get '/component/component-gallery', (req, res) ->
-  res.render '../component/component-gallery/index.jade'
-
-app.get '/component/component-navigation', (req, res) ->
-  res.render '../component/component-navigation/index.jade'
+app.get '/component/:component', (req, res) ->
+  res.render '../component/' + req.params.component + '/index.jade'
 
 app.get '/who', (req, res) ->
   res.render 'who'
