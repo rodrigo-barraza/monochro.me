@@ -1,0 +1,9 @@
+dom-module(id="component-works")
+  template
+    article(itemscope itemtype="http://schema.org/Photograph")
+      figure(itemscope itemprop="encoding" itemtype="http://schema.org/ImageObject")
+        template(is="dom-repeat" items="{{items}}")
+          img(itemprop="contentUrl" src="{{item.source}}" alt="")
+      header#photograph-description(itemprop="description")
+        span(itemprop="name")
+      
