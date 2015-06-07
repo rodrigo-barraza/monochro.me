@@ -2,14 +2,14 @@ block vars
 doctype html
 html
   head
-    title #{page_title}
+    title!= page_title
     meta(name="description" content='#{page_description}')
     meta(name="keywords" content='#{page_keywords}')
 
     script(src="bower_components/angular/angular.js")
     script(src="bower_components/webcomponentsjs/webcomponents.min.js")
     script
-      :coffeescript
+      :coffee-script
         window.addEventListener 'polymer-ready', (e) ->
           ajax = document.querySelector('core-ajax')
           ajax.addEventListener 'core-response', (e) ->
@@ -19,7 +19,11 @@ html
           return
 
     link(rel="import",          href="bower_components/polymer/polymer.html")
+    link(rel="import",          href="component/component-test-gold")
+    link(rel="import",          href="component/component-test-silver")
+    link(rel="import",          href="component/component-works")
     link(rel="import",          href="component/component-gallery")
+    link(rel="import",          href="component/component-works")
     link(rel="import",          href="component/component-header")
     link(rel="import",          href="component/component-app")
     link(rel="import",          href="component/component-navigation")

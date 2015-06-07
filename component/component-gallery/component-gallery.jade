@@ -1,6 +1,10 @@
 dom-module(id="component-gallery")
   template
-    template(is="dom-repeat" items="{{works}}")
-      a(href="{{item.path}}")
-        img(src="{{item.path}}" alt="{{item.description}}")
-        span {{item.name}}
+    article(itemscope itemtype="http://schema.org/Photograph")
+      figure(itemscope itemprop="encoding" itemtype="http://schema.org/ImageObject")
+        template(is="dom-repeat" items="{{works}}" as="work" filter="dreamworkfilter")
+          template(is="dom-repeat" items="{{work.contentUrl}}" as="image")
+            img(src="{{image}}")
+          header#photograph-description(itemprop="description")
+            h1(itemprop="name") {{work.name}}
+            p(itemprop="name") {{work.description}}

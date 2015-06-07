@@ -1,4 +1,6 @@
 Polymer
   is: 'component-works'
-  ready: ->
-    @works = @works || []
+  properties:
+    works:
+      type: Array
+      notify: true
