@@ -16,7 +16,6 @@ app.use stylus.middleware
   dest: __dirname + '/'
   force: true
   compile: compile
-  console.log 'testest'
 
 app.use '/public', express.static(path.join(__dirname + '/public'))
 app.use '/asset', express.static(path.join(__dirname + '/asset'))
@@ -24,8 +23,6 @@ app.use '/asset', express.static(path.join(__dirname + '/asset'))
 app.use '/component', express.static(path.join(__dirname + '/component'))
 app.use '/bower_components', express.static(path.join(__dirname + '/bower_components'))
 app.use '/css', express.static(path.join(__dirname + '/css'))
-
-
 
 app.get '/component/:component', (req, res) ->
   res.render '../component/' + req.params.component + '/index.jade',
@@ -40,6 +37,7 @@ app.get '/:work', (req, res) ->
       req.params.work
 
   console.log req.params.work
+
 
 app.get '/who', (req, res) ->
   res.render 'who'

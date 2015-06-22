@@ -5,19 +5,6 @@ html
     title!= page_title
     meta(name="description" content='#{page_description}')
     meta(name="keywords" content='#{page_keywords}')
-
-    script(src="bower_components/angular/angular.js")
-    script(src="bower_components/webcomponentsjs/webcomponents.min.js")
-    script
-      :coffee-script
-        window.addEventListener 'polymer-ready', (e) ->
-          ajax = document.querySelector('core-ajax')
-          ajax.addEventListener 'core-response', (e) ->
-            console.log @response
-            return
-          ajax.go()
-          return
-
     link(rel="import",          href="bower_components/polymer/polymer.html")
     link(rel="import",          href="component/component-test-gold")
     link(rel="import",          href="component/component-test-silver")
@@ -32,3 +19,17 @@ html
     link(rel="shortcut icon",   href="favicon.ico")
 
     component-app
+    
+    script(src="bower_components/angular/angular.js")
+    script(src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js")
+    script(src="../app.coffee")
+    script(src="bower_components/webcomponentsjs/webcomponents.min.js")
+    script
+      :coffee-script
+        window.addEventListener 'polymer-ready', (e) ->
+          ajax = document.querySelector('core-ajax')
+          ajax.addEventListener 'core-response', (e) ->
+            console.log @response
+            return
+          ajax.go()
+          return
